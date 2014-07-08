@@ -1,0 +1,8 @@
+请注意 
+
+  1、编码是 UTF-8
+  2、一定要与WEBSERVICE的命名空间相同，否则服务会拒绝，或返回-12
+
+详细命名空间请查阅
+
+http://service2.winic.org:8003/Service.asmx

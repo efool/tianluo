@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>返回示例
+-02/Send:1/Consumption:0/Tmoney:0 / sid
+状态码 / 发送条数 / 当次消费金额 / 总体余额 /短信编号
+
+返回状态码 信息说明
+000 成送成功！
+-01 当前账号余额不足！
+-02 当前用户ID错误！
+-03 当前密码错误！
+-04 参数不够或参数内容的类型错误！
+-05 手机号码格式不对！
+-06 短信内容编码不对！
+-07 短信内容含有敏感字符！
+-8 无接收数据
+-09 系统维护中..
+-10 手机号码数量超长！（100个/次 超100个请自行做循环）
+-11 短信内容超长！（70个字符）
+-12 其它错误！</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEACACoCAAAFgAAACgAAAAgAAAAQAAAAAEACAAAAAAAAAQAAAAAAAAAAAAAAAEAAAAB
+        AAAAAAAANQAYADYRHgA8BiAANRAnADsSJAA/EzMARgMiAEkBIwBOACgAUwMsAFwELgBZCSwARw01AF0H
+        MABAEzEAWRY3AGELOABxDjgAZRM2AG0WPQBjHzwAbRk9AE4tPABTIDgAUi8+AHQURgB5E0IAdhxBAHkd
+        RQBkDl4AUyBGAFIgTABdI1EAWihWAF0wUABgJ1gAeSNSAHwpUABkMl8AezNaAGkOYQBqFGMAcRtsAHQc
+        cAByJG0AdyV0AHsyeABoQVsAdkJcAHlLZwBxV2MAdllmAH9ZaQB6Q3MAf2hzAIQSOwCzewAAghNBAIkT
+        RwCFF0gAihtLAIUeUgCJG1AAgSdNAIsgTQCNI1QAiilTAIEkWACNIlkAgCtaAJEyXQCQKmIAizFhAJk1
+        ZACVNGsAgD56AJU1cwCYN3cAkD13AJs/dgCaPHkAgUhqAINGfgCPRX8An0d8AIFYfACjQmsApENxAKJK
+        cQCpTHQAqEx+AKpTegCrWH0AhmR1ALeEAAC/kgMAv44iAL+QKADCmAEAyKQJAMyqGgDEmDYAz60uAM+x
+        IgDRsS4Azqo7ANS4PAC/iEQAx5tDAMKPUwDKoUkA1bpIANi8VQDFk2AAzKJhANGsaQDWt20AzqV1ANKs
+        eQDXs30A2sFcAN3HagDfy3MA4c9tAOLOfgDk0X4AhzaGAItJhgCOT48An0OHAJpOgwCeRYsAn0mMAItS
+        iwCVVIUAklONAJRdjwCOUpQAklWSAJ9SlQCXXpQAmF+UAJZTmQCgRIQApEyBAKNLiQCoUY8Aok2TAKVR
+        kgCmVJoAqVSYAKdYnACbZJgAp2WdALZtnQCtf5cAuXCeAKpcogCxXqYAsF+qAJpgogCqY6cAoW6iAKtk
+        qQCmbq0AtGukALRmrgCyaK8AqnKkAKl6pACmd6wAp3yqAKx+qgCzf6wAr2SwAKZtsACya7UArHKyALZ1
+        uQCsf8cAuXXEAK6CqwCyh68AroazAL2CtAC1jrQAvIK6ALePuADLnYQA0qiOANq+gADCjLMA3sGaAOTS
+        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
+        gAGP/8AHx//gH+D//f/4f///
+</value>
+  </data>
+</root>

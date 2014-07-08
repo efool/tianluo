@@ -1,0 +1,14 @@
+<?php
+
+$url="http://service.winic.org/sys_port/gateway/?id=%s&pwd=%s&to=%s&content=%s&time=";
+$id = urlencode("yyii");
+$pwd = urlencode("p@\$\$w0rd");
+$to = urlencode("15010908948");
+$content = urlencode("1234567890");
+$rurl = sprintf($url, $id, $pwd, $to, $content);
+printf("url=%s\n", $rurl);
+$ret = file($rurl);
+print_r($ret);
+
+
+?> 

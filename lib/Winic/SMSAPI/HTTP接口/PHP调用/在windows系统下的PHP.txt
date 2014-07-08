@@ -1,0 +1,18 @@
+<?php
+
+$uid="test" //·ÖÅä¸øÄãµÄÕËºÅ
+$pwd="123456" //ÃÜÂë
+$mob="13928783309,13800008888" //·¢ËÍºÅÂëÓÃ¶ººÅ·Ö¸ô
+$content="ÄãºÃ¶ÌÐÅÄÚÈÝ" //¶ÌÐÅÄÚÈÝ
+
+//===========================
+
+$sendurl="http://service.winic.org/sys_port/gateway/?id=".$uid."&pwd=".$pwd."&to=".$mob."&content=".$content."&time="
+$xhr=new COM("MSXML2.XMLHTTP"); 
+$xhr->open("GET",$sendurl,false); 
+$xhr->send(); 
+echo   $xhr->responseText  ;  
+
+
+?> 
+

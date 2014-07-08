@@ -1,0 +1,8 @@
+
+
+ //delphi调用net2.0在自动生成的Service.pas文件里需要加这一行。否则会出错。
+
+ InvRegistry.RegisterInvokeOptions(TypeInfo(Service1Soap), ioDocument);   
+
+
+

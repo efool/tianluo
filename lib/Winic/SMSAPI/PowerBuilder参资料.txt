@@ -1,0 +1,76 @@
+PowerBuilder
+===================
+发送信息的HTTP请求格式 
+
+Get操作的格式为： 
+http://www.sms10000.com:8080/MT?id=param1&password=param2&mobile=param3&content=param4 
+
+请求字符串例子: 
+http://www.sms10000.com:8080/MT?id=002&password=2D732A5F09BCC1E78039C1099E60F701&mobile=13510665001,13510665002&content=testHTTP 
+
+
+参数说明： 
+参数名称 说明 
+id 企业ID号 
+password 密码,MD5加密后的密文(大写) 
+mobile 手机号码,同时发送给多个号码时,号码间用逗号分隔 
+content 消息内容【使用URLEncoder.encode（）进行字符标准化转码】 
+
+
+如何写代码？ 
+--------------------------------------------------------------------------------
+这个问题第1个回答：
+方法1: 
+$PBExportHeader$n_cst_internet.sru 
+forward 
+global type n_cst_internet from internetresult 
+end type 
+end forward 
+
+global type n_cst_internet from internetresult 
+end type 
+global n_cst_internet n_cst_internet 
+
+type variables 
+string is_data 
+end variables 
+forward prototypes 
+public function integer internetdata (blob data) 
+end prototypes 
+
+public function integer internetdata (blob data);is_data = string(data) 
+return 1 
+end function 
+
+on n_cst_internet.create 
+call super::create 
+TriggerEvent( this, "constructor" ) 
+end on 
+
+on n_cst_internet.destroy 
+TriggerEvent( this, "destructor" ) 
+call super::destroy 
+end on 
+------------------------ 
+
+把以上代码导入成一个对象 n_cst_internet 
+然后调用以下代码即可 
+
+string ls_result 
+integer li_rc 
+inet linet_main 
+n_cst_internet luo_data  // as defined above 
+
+linet_main = CREATE inet 
+luo_data = CREATE n_cst_internet 
+
+SetPointer(HourGlass!) 
+li_rc = & 
+linet_main.GetURL("网页地址", luo_data) 
+SetPointer(Arrow!) 
+ls_result = luo_data.is_data 
+Messagebox("",ls_result) 
+
+DESTROY luo_data 
+DESTROY linet_main 
+return ls_result 

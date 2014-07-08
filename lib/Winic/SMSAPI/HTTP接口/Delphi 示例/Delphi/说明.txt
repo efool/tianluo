@@ -1,0 +1,40 @@
+注意引用
+
+uses 
+comobj
+
+
+//_________________________________HTTP通信函数返回信息
+function  HTTPwebservice(url:string):string;
+var
+    responseText:   WideString;
+    xmlHttp:   OLEVariant;
+
+begin
+    try
+        xmlHttp:=CreateOleObject('Msxml2.XMLHTTP');
+        xmlHttp.open('GET',url,false);
+        xmlHttp.send();
+        responseText:=xmlHttp.responseText;
+        if   xmlHttp.status='200'   then
+        begin
+        HTTPwebservice:=responseText;
+        end;
+        xmlHttp   :=   Unassigned;
+    except
+          exit;
+    end;
+end;
+//______________________________
+
+ //使用时调用即可   bdata:=HTTPwebservice('http://service.winic.org/sys_port/gateway/?id='+uid.Text+'&pwd='+pwd.Text+'&to='+mobstr+'&content='+content.Text+'&time=');
+   
+=================================================== 
+发短信公共接口
+http://service.winic.org/sys_port/gateway/?id=[id]&pwd=[pwd]&to=[to]&content=[countent]&time=[time]
+[id]=用户名称
+[pwd]=用户密码
+[to]=接收手机号(100个以内) 以 , 号分隔
+[countent]=短信内容 70个字符
+[time]=定时发
+
